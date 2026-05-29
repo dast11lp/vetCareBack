@@ -42,6 +42,9 @@ public class Pet {
 	@Column(name = "raza_mas")
 	private String breed;
 
+	@Column(name ="imagen")
+	private String image;
+
 	@JsonIgnoreProperties({"pets", "handler", "hibernateLazyInitializer"})
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_pro")
@@ -115,5 +118,12 @@ public class Pet {
 		this.appointments = appointments;
 	}
 
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
 }
 

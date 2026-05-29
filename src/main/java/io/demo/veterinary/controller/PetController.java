@@ -35,5 +35,4 @@ public class PetController extends BaseController<Pet, PetService> {
 	public ResponseEntity<?> myAppointments(@PathVariable Long idPet) throws IOException {
 		return ResponseEntity.ok(this.petService.findById(idPet).getAppointments());
 	}
-	
 }
